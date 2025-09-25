@@ -92,7 +92,7 @@ export default function Totalappointments() {
     const fetchAppointments = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:4000/api/appointments");
+        const res = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models/api/appointments");
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
         const appointmentsWithStatus = data.map((apt) => ({
@@ -336,3 +336,4 @@ export default function Totalappointments() {
     </>
   );
 }
+
