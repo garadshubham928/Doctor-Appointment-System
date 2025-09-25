@@ -12,7 +12,7 @@ export default function Userlogin() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/userinfo/login", {
+      const response = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models/api/userinfo/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ Email, PassWord }),
@@ -114,3 +114,4 @@ export default function Userlogin() {
     </div>
   );
 }
+
