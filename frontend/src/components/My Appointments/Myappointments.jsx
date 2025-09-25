@@ -124,7 +124,7 @@ export default function MyAppointments() {
     const fetchAppointments = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:4000/api/appointments");
+        const res = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models/api/appointments");
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
@@ -171,7 +171,7 @@ export default function MyAppointments() {
   const handleCancel = async (id) => {
     if (window.confirm("Are you sure you want to cancel this appointment?")) {
       try {
-        const res = await fetch(`http://localhost:4000/api/appointments/${id}`, {
+        const res = await fetch(`https://doctor-appointment-system-9chq.onrender.com/api/models/api/appointments/${id}`, {
           method: "DELETE",
         });
         
@@ -203,7 +203,7 @@ export default function MyAppointments() {
       }
 
       try {
-        const res = await fetch(`http://localhost:4000/api/appointments/${id}`, {
+        const res = await fetch(`https://doctor-appointment-system-9chq.onrender.com/api/models/api/appointments/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ date: newDate, time: newTime }),
@@ -482,4 +482,5 @@ export default function MyAppointments() {
       <Footer />
     </>
   );
+
 }
