@@ -33,7 +33,7 @@
 //   // Fetch all doctors
 //   const fetchModels = async () => {
 //     try {
-//       const response = await fetch("http://localhost:4000/api/models");
+//       const response = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models");
 //       if (response.ok) {
 //         const data = await response.json();
 //         setModels(data);
@@ -89,7 +89,7 @@
 //     setSuccessMessage("");
 
 //     try {
-//       const res = await fetch("http://localhost:4000/api/appointments", {
+//       const res = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/appointments", {
 //         method: "POST",
 //         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify({
@@ -495,7 +495,7 @@ export default function Home() {
   // Fetch all doctors
   const fetchModels = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/models");
+      const response = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models");
       if (response.ok) {
         const data = await response.json();
         setModels(data);
@@ -551,7 +551,7 @@ export default function Home() {
     setSuccessMessage("");
 
     try {
-      const res = await fetch("http://localhost:4000/api/appointments", {
+      const res = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/appointments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -925,4 +925,5 @@ export default function Home() {
       )}
     </>
   );
+
 }
