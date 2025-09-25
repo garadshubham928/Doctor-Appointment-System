@@ -13,7 +13,7 @@ export default function Userregistration() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/userinfo/insert", {
+      const response = await fetch("https://doctor-appointment-system-9chq.onrender.com/api/models/api/userinfo/insert", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -106,3 +106,4 @@ export default function Userregistration() {
     </div>
   );
 }
+
