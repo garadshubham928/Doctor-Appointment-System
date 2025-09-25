@@ -12,7 +12,7 @@ export default function DoctorLogin() {
     e.preventDefault();
 
     try {
-     const response = await fetch("hhttps://doctor-appointment-system-9chq.onrender.com//api/doctors/login", {
+     const response = await fetch("hhttps://doctor-appointment-system-9chq.onrender.com/api/doctors/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ Email, PassWord }),  // ✅ FIXED
@@ -116,4 +116,5 @@ export default function DoctorLogin() {
     </div>
   );
 }
+
 
