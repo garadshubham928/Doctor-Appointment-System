@@ -24,7 +24,7 @@ export default function Admin() {
   // Fetch models
   const fetchModels = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/models');
+      const response = await fetch('https://doctor-appointment-system-9chq.onrender.com//api/models');
       if (response.ok) {
         const data = await response.json();
         setModels(data);
@@ -75,8 +75,8 @@ export default function Admin() {
       }
 
       const url = editingId
-        ? `http://localhost:4000/api/models/${editingId}`
-        : 'http://localhost:4000/api/models';
+        ? `https://doctor-appointment-system-9chq.onrender.com//api/models/${editingId}`
+        : 'https://doctor-appointment-system-9chq.onrender.com//api/models';
       const method = editingId ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
@@ -118,7 +118,7 @@ export default function Admin() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this doctor?')) {
       try {
-        const response = await fetch(`http://localhost:4000/api/models/${id}`, { method: 'DELETE' });
+        const response = await fetch(`https://doctor-appointment-system-9chq.onrender.com//api/models/${id}`, { method: 'DELETE' });
         const result = await response.json();
         if (response.ok) {
           setMessage('Doctor deleted successfully!');
@@ -339,4 +339,5 @@ export default function Admin() {
     </>
   );
 }
+
 
