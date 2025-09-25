@@ -1,3 +1,4 @@
+// Modules
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
@@ -375,4 +376,5 @@ app.post('/api/doctors/login', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
+
 });
